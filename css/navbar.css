@@ -1,0 +1,91 @@
+*, *::before, *::after{
+    box-sizing:border-box;
+    /* outline:solid; */
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+    /* color:white; */
+}
+
+.main-nav {
+    /* position: static;  */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    outline:solid;
+    height:66px;
+}
+.main-nav > div{
+    display:flex;
+    align-items:center;
+    /* outline:solid; */
+    margin-left:15px;
+}
+.logo-icon { 
+    width:45px;
+    height:45px;
+    margin-right:5px;
+    /* background: hsv(0, 0%,900%); */
+}
+
+.logo-name{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    /* width:139px;
+    height:53px; */
+}
+
+
+.nav-links > li{
+    display:inline;
+    text-decoration: none;
+    margin-right:15px;
+}
+
+
+
+
+/*Call Us button*/
+
+
+.nav-links > li:nth-child(2) > a{
+    background:#009CFF;
+    color:white;
+    padding: 0 40px 0 40px;
+    font-size:30px;
+}
+
+.nav-links > li:nth-child(2) > a:hover{
+    box-shadow: 0px 0px 12px -3px rgba(0,0,0,0.75);;
+}
+
+.nav-links > li:nth-child(2) > a{
+    color:white;
+    font-size:30px;
+}
+
+.nav-links > li:nth-child(1) > a{
+    /* color:#A9B4BB; */
+    color: hsl(0, 0%, 60%);
+    font-size:30px;
+    cursor: pointer;
+}
+
+.nav-links > li:first-child> a:hover{
+    /* color:#A9B4BB; */
+    /* font-size: large; */
+    color: hsl(0, 0%, 70%);
+} 
+
+@media only screen and (max-width: 600px){
+    .nav-links{
+        display:none;
+    }
+}

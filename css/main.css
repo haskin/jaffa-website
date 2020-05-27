@@ -1,0 +1,258 @@
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
+*, *::before, *::after{
+    box-sizing:border-box;
+    /* outline:solid; */
+    padding:0;
+    margin:0;
+    border:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../assets/brooklyn-taxi.jpg");
+    height:70vh;
+    width:100%;
+    /* background-color: aqua; */
+    background-size:cover;
+    background-position: center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    color:white;
+    /* margin-top:10%; */
+}
+
+.hero-content > h1{
+    text-align:center;
+    font-size:calc(3.5em + 2vw) ;
+}
+.hero-content > p{
+    font-size:calc(1.5em + 1vw);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hero-mobile-links{
+    /* outline:solid; */
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
+}
+.hero-mobile-links > li{
+    display:inline;
+}
+
+.hero-mobile-links > li:first-child > a{
+    font-size:2em;
+    color:hsl(0, 0%, 80%);
+}
+
+.hero-mobile-links > li:first-child > a:hover{
+    color:hsl(0, 0%, 90%);
+}
+.hero-mobile-links > li:nth-child(2) > a{
+    background: hsl(203, 100%, 50%);
+    color:white;
+    padding: 0 40px 0 40px;
+    font-size:2em;
+}
+
+.hero-mobile-links > li:nth-child(2) > a:hover{
+    background: hsl(203, 100%, 60%)
+}   
+
+@media only screen and (min-width:600px){
+    .hero-mobile-links{
+        display:none;
+    }
+}
+
+.hero-content > p > strong{
+    color: #5ABFFF;
+    font-size:calc(1.3em + 1vw)
+    /* font-weight; */
+}
+
+/******************* SERVICES *******************/
+.services-section{
+    margin-top: 20px;
+    text-align:center;
+    margin-bottom:20px;
+    /* height:100vh; */
+    /* border: 20px solid #5ABFFF; */
+    /* border-top-left-radius: 30px; */
+}
+
+.services-section > h1{
+    display:inline;
+    /* outline:solid; */
+    font-size: calc(1.1em + 2vh);
+    text-align:center;
+    /* margin-bottom: 15px; */
+}
+
+.services-container{
+    /* width:75vh; */
+    /* outline:solid; */
+    margin-top:15px;
+    display:flex;
+    /* justify-content:center; */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* outline:solid; */
+    /* width:99.8vw; */
+    text-align:center;
+    /* text-align:center; */
+    /* outline:solid; */
+}
+
+.services-container > article{
+    /* border:0 1px 0 1px solid hsl(0, 0%, 60%); */
+    border-top:0;
+    border-bottom:0;
+    padding: 0 15px 0 15px;
+    border-left: 3px;
+    border-right: 3px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 60%);
+    margin-bottom: 30px;
+    /* width: calc(300px * 100vw); */
+    width: 20vw;
+    /* border-radius: 5px; */
+    /* display:inline-block; */
+    /* text-align: center; */
+    /* outline:solid; */
+    /* outline:solid; */
+}
+
+/* Middle article to create spacing*/
+.services-container > article:nth-child(2){
+    margin-left: 100px;
+    margin-right: 100px;
+} 
+
+.services-container > article > h2{
+    margin-top:5px;
+    margin-bottom:10px;
+
+}
+
+.services-container > article > p {
+    text-align:left;
+    line-height: 150%;
+    font-size:1.3em;
+}
+
+.service-icon{
+    /* display:none; */
+    width:50px;
+    height:50px;
+}
+
+@media only screen and (max-width: 1200px){
+
+    .services-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-container > article{
+        width: 60vw;
+    }
+   /* Middle article to create spacing*/
+    .services-container > article:nth-child(2){
+        margin-left: 0px;
+        margin-right: 0px;
+    } 
+}
+
+@media only screen and (max-width: 500px){
+    .services-container > article{
+        width: 90vw;
+    }
+}
+
+
+/****************LOCATION **********************/
+
+#location { 
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.location-info{
+    width:50%;
+    display:flex;
+    align-self: center;
+    /* text-align:center; */
+    flex-direction: column;
+    align-items: center; 
+}
+.location-info-content{
+    /* color:red; */
+    /* margin-left:auto;
+    margin-right:auto;
+    outline:solid;
+    display:flex;
+    flex-direction: column;
+    align-items: center; */
+    text-align:left;
+}
+.location-info-content > h2 {
+    text-align: left;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.location-info-content > p{
+    line-height: 150%;
+    font-size:1.3em;
+    margin-bottom:10px;
+}
+
+.location-info-content > a{
+    background:#009CFF;
+    color:white;
+    padding: 0 40px 0 40px;
+    font-size:30px;
+}
+
+.location-info-content > a:hover{
+    box-shadow: 0px 0px 12px -3px rgba(0,0,0,0.75);
+}
+
+.location-image{
+    /* width:100vw; */
+    width:50%;
+}
+
+@media only screen and (max-width: 800px){
+    .location-info{
+        width:100%;
+    }
+
+    .location-info-content{
+        text-align:center;
+        margin-bottom:30px;
+    }
+
+    .location-info-content > h2 {
+        text-align:center;
+    }
+    .location-image{
+        width:100%;
+    }
+}
